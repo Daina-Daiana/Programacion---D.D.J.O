@@ -17,6 +17,7 @@
  *
  * @author Deepseek
  * Editor: Roberto Méndez
+ * Editor: Daina Daiana Jiménez Olivera
  * Fecha : 11 Feb 2026
  */
 import java.text.DecimalFormat;
