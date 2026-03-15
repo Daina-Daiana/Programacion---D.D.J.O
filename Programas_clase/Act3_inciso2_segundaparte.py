@@ -16,4 +16,4 @@ años = int(input("Años de inversión: "))
 capital = e
 for n in range(1, años + 1):
     capital = capital * n - 1
-    print(f"Año {n}: {capital:.10f}")
+    print(f"Año {n}")
