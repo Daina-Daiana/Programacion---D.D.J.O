@@ -3,7 +3,7 @@ Autor: Hëctor Daniel Cervantes Cañedo
 Materia: Programación
 Grupo: 9157
 Tema: Actividad 3 inciso 1 del segundo apartado
-Fecha: 2026-02-12
+Fecha: 2026-03-14
 ===========================================================
 
 OBJETIVO DEL SCRIPT
