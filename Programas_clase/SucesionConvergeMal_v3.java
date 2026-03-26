@@ -32,7 +32,7 @@
  *  @author:  Roberto Méndez Méndez
  *  Editor: Daina Daiana Jimenez Olivera 
  *  @since   20 Feb 2026
- *  Editado  22 marzo 2026
+ *  Editado  25 marzo 2026
  */
 
 public class SucesionConvergeMal_v3 {
