@@ -31,7 +31,7 @@
  * @author Roberto Méndez Méndez / Deepseek
  * Editor: Daina Daiana Jimenez Olivera 
  * Fecha: 16/ Marzo/ 22
- * Editado: 25 Marzo 2026
+ * Editado: 01 Abril 2026
  */
 
 public class Estructura_ManejoDatos {
@@ -84,15 +84,23 @@ public class Estructura_ManejoDatos {
     }
 
     public int max() {
-        // Encontrar máximo
-        return 0;
+        if (data.length == 0) throw new IllegalStateException("Arreglo vacío");
+        int maximo = data[0];
+        for (int i = 1; i < data.length; i++) {
+            if (data[i] > maximo) maximo = data[i];
+      }
+      return maximo;
     }
 
     public int min() {
-        // Encontrar mínimo
-        return 0;
+        if (data.length == 0) throw new IllegalStateException("Arreglo vacío");
+        int minimo = data[0];
+        for (int i = 1; i < data.length; i++) {
+            if (data[i] < minimo) minimo = data[i];
+      }
+      return minimo;
     }
-
+    
     public double average() {
         // Calcular promedio
         return 0.0;
