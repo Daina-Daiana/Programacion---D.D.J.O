@@ -57,13 +57,12 @@ public class Estructura_ManejoDatos {
     }
 
     public void bubbleSort() {
-        // Implementación de bubble Sort
-        int i = 0;
+        int i = 0;                        
         boolean sorted = false;
-        while( i < data.length && !sorted){
+        while (i < data.length - 1 && !sorted) {
             sorted = true;
-            for(int j = data.length-1; j >= i + 1; j--){
-                if(data[j] < data[j-1]){
+            for (int j = data.length - 1; j >= i + 1; j--) {
+                if (data[j] < data[j-1]) {
                     int aux = data[j];
                     data[j] = data[j-1];
                     data[j-1] = aux;
