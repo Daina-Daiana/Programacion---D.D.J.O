@@ -77,30 +77,32 @@ public class Estructura_ManejoDatos {
 
     public void insertionSort() {
         int n = data.length;
-        for (int i = 1; i < n; i++) {
-            int key = data[i];
-            int j = i - 1;
-            while (j >= 0 && data[j] > key) {
+        for (int i = 1; i < n; i++) {      // i = 2..n en 1-indexed
+            int x = data[i];               // x = A[i]
+            int j = i - 1;                 // j = i-1
+            while (j >= 0 && data[j] > x) {
                 data[j + 1] = data[j];
                 j--;
             }
-            data[j + 1] = key;
+            data[j + 1] = x;
         }
     }
 
     public void selectionSort() {
         int n = data.length;
         for (int i = 0; i < n - 1; i++) {
-            int minIdx = i;
+            int k = i;                     
             for (int j = i + 1; j < n; j++) {
-                if (data[j] < data[minIdx]) {
-                    minIdx = j;
+                if (data[j] < data[k]) {
+                    k = j;
                 }
-           }
-           int temp = data[minIdx];
-           data[minIdx] = data[i];
-           data[i] = temp;
-        }
+            }
+            if (k != i) {
+                int temp = data[i];
+                data[i] = data[k];
+                data[k] = temp;
+            }
+         }
     }
 
     public int max() {
