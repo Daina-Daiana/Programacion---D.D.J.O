@@ -76,9 +76,9 @@ public class Estructura_ManejoDatos {
     
     public void insertionSort() {
         int n = data.length;
-        for (int i = 1; i < n; i++) {      // i = 2..n en 1-indexed
-            int x = data[i];               // x = A[i]
-            int j = i - 1;                 // j = i-1
+        for (int i = 1; i < n; i++) {      
+            int x = data[i];               
+            int j = i - 1;                 
             while (j >= 0 && data[j] > x) {
                 data[j + 1] = data[j];
                 j--;
