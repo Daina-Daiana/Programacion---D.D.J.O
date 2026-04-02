@@ -22,7 +22,6 @@ public class Usa_ManejoDatos {
 
     void main() {
         Scanner sc = new Scanner(System.in);
-        // Se inicializa con un arreglo vacío para evitar null
         Estructura_Manejodatos gestor = new Estructura_Manejodatos();
         int opcion = 0;
 
