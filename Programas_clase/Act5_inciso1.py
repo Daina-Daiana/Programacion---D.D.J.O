@@ -1,3 +1,15 @@
+Autor: Daina Daiana Jimenez Olivera
+Autor: Hëctor Daniel Cervantes Cañedo
+Materia: Programación
+Grupo: 9157
+Tema: Actividad 5 inciso 1 
+Fecha: 2026-05-4
+===========================================================
+
+OBJETIVO DEL SCRIPT
+-----------------------------------------------------------
+Programar el programar utilizando el “método de Euler Hacia Adelante”, resuelve el sistema de
+EDO 
 import numpy as np
 import matplotlib.pyplot as plt
 
