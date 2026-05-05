@@ -2,8 +2,8 @@ Autor: Daina Daiana Jimenez Olivera
 Autor: Hëctor Daniel Cervantes Cañedo
 Materia: Programación
 Grupo: 9157
-Tema: Actividad 3 inciso 1 del segundo apartado
-Fecha: 2026-03-14
+Tema: Actividad 5 inciso 1 del tercer apartado
+Fecha: 2026-05-4
 ===========================================================
 
 OBJETIVO DEL SCRIPT
