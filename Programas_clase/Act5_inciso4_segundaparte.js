@@ -3,58 +3,45 @@ Autor: Daina Daiana Jimenez Olivera
 Autor: Hëctor Daniel Cervantes Cañedo
 Materia: Programación
 Grupo: 9157
-Tema: Actividad 3 inciso 1 del segundo apartado
+Tema: Actividad 5 inciso 4 del segundo apartado
 Fecha: 2026-03-14
 ===========================================================
 
 OBJETIVO DEL SCRIPT
 -----------------------------------------------------------
 Programar el programa dado y modificarlo a 5 bits de estenografia
-// Función para ocultar la imagen 
-function hideMessage() {
-    let coverImg = new SimpleImage(document.getElementById("d1"));
-    let hideImg = new SimpleImage(document.getElementById("hfinput"));
-    let outputCanvas = document.getElementById("hides");
-    
-    // Ajustar tamaño de hideImg al de coverImg 
-    
-    for (let pixel of coverImg.values()) {
-        let x = pixel.getX();
-        let y = pixel.getY();
-        let hidePixel = hideImg.getPixel(x, y);
-        
-        // Nuevo cálculo: mantener solo 3 MSB del cover (máscara 0xE0)
-        let newR = (pixel.getRed()   & 0xE0) | (hidePixel.getRed()   >> 3);
-        let newG = (pixel.getGreen() & 0xE0) | (hidePixel.getGreen() >> 3);
-        let newB = (pixel.getBlue()  & 0xE0) | (hidePixel.getBlue()  >> 3);
-        
-        pixel.setRed(newR);
-        pixel.setGreen(newG);
-        pixel.setBlue(newB);
-    }
-    coverImg.drawTo(outputCanvas);
-}
 
-// Función para extraer la imagen oculta 
-function getMessage() {
-    let stegoImg = new SimpleImage(document.getElementById("hides"));
-    let outputCanvas = document.getElementById("hfoutput"); // o algún canvas para mostrar
-    // Crear una imagen vacía del mismo tamaño
-    let recovered = new SimpleImage(stegoImg.getWidth(), stegoImg.getHeight());
+function hideMessage() {
+    var cover = new SimpleImage(document.getElementById("d1"));
+    var hide = new SimpleImage(document.getElementById("hfinput"));
+    var output = document.getElementById("hides");
     
-    for (let pixel of stegoImg.values()) {
-        let x = pixel.getX();
-        let y = pixel.getY();
-        let recoverPixel = recovered.getPixel(x, y);
-        
-        // Tomar los 5 LSB y desplazar 3 a la izquierda
-        let r = (pixel.getRed()   & 0x1F) << 3;
-        let g = (pixel.getGreen() & 0x1F) << 3;
-        let b = (pixel.getBlue()  & 0x1F) << 3;
-        
-        recoverPixel.setRed(r);
-        recoverPixel.setGreen(g);
-        recoverPixel.setBlue(b);
+    // Redimensionar
+    var w = cover.getWidth();
+    var h = cover.getHeight();
+    var newHide = new SimpleImage(w, h);
+    for (var x = 0; x < w; x++) {
+        for (var y = 0; y < h; y++) {
+            var hp = hide.getPixel(x % hide.getWidth(), y % hide.getHeight());
+            var p = newHide.getPixel(x, y);
+            p.setRed(hp.getRed());
+            p.setGreen(hp.getGreen());
+            p.setBlue(hp.getBlue());
+        }
     }
-    recovered.drawTo(outputCanvas);
+    hide = newHide;
+    
+    for (var x = 0; x < w; x++) {
+        for (var y = 0; y < h; y++) {
+            var pixel = cover.getPixel(x, y);
+            var hp = hide.getPixel(x, y);
+            var newR = (pixel.getRed() & 0xE0) | (hp.getRed() >> 3);
+            var newG = (pixel.getGreen() & 0xE0) | (hp.getGreen() >> 3);
+            var newB = (pixel.getBlue() & 0xE0) | (hp.getBlue() >> 3);
+            pixel.setRed(newR);
+            pixel.setGreen(newG);
+            pixel.setBlue(newB);
+        }
+    }
+    cover.drawTo(output);
 }
