@@ -45,7 +45,7 @@ public class Item {
         return valorActual;
     }
 
-    public void setCondicion() {
+    public void setCondicion(boolean estado) {
     this.Condicion = estado;
     }
 }
