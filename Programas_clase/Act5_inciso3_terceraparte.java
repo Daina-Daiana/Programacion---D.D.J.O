@@ -21,14 +21,4 @@ public class Balon extends Item {
         this.diameter = diameter;
         this.brand = brand;
     }
-
-    // Getters y setters
-
-    @Override
-    public double valorReal() {
-        double valorActual = value;
-        if (!Condicion)
-            valorActual = value * 0.7; // ejemplo: 30% de descuento si está deteriorado
-        return valorActual;
-    }
 }
