@@ -21,14 +21,4 @@ public class Silla extends Item {
         this.material = material;
         this.hasBack = hasBack;
     }
-
-    // Getters y setters (opcionales)
-
-    @Override
-    public double valorReal() {
-        double valorActual = value;
-        if (!Condicion)
-            valorActual = value * 0.85; // ejemplo: 15% de descuento si está en mal estado
-        return valorActual;
-    }
 }
