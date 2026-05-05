@@ -1,3 +1,15 @@
+
+Autor: Daina Daiana Jimenez Olivera
+Autor: Hëctor Daniel Cervantes Cañedo
+Materia: Programación
+Grupo: 9157
+Tema: Actividad 3 inciso 1 del segundo apartado
+Fecha: 2026-03-14
+===========================================================
+
+OBJETIVO DEL SCRIPT
+-----------------------------------------------------------
+Programar el programa dado y modificarlo a 5 bits de estenografia
 // Función para ocultar la imagen 
 function hideMessage() {
     let coverImg = new SimpleImage(document.getElementById("d1"));
