@@ -7,8 +7,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from animales.perro import Perro
 from animales.gato import Gato
 from animales.pajaro import Pajaro
-from animales.pez import Pez
-from animales.serpiente import Serpiente
 
 def mostrar_menu(animales):
     print("\n=== MENÚ DE ANIMALES ===")
@@ -31,7 +29,7 @@ def obtener_opcion(animales):
 
 def main():
     # Crear una lista con instancias de todos los animales
-    animales = [Perro(), Gato(), Pajaro(), Pez(), Serpiente()]
+    animales = [Perro(), Gato(), Pajaro()]
 
     while True:
         mostrar_menu(animales)
