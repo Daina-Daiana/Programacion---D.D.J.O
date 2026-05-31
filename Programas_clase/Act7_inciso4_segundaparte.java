@@ -2,7 +2,7 @@ package escribeaarchivo;
 
 import javax.swing.*;
 import java.io.*;
-import selectorderarchivo.SelectorGraficoDeArchivo2; // Asumiendo que existe
+import selectorderarchivo.SelectorGraficoDeArchivo2;
 
 public class EscribeAArchivoBasico {
 
@@ -39,5 +39,4 @@ public class EscribeAArchivoBasico {
         }
     }
 
-    // ... resto de métodos (escribirAArchivoF2, F3) se modifican después
 }
